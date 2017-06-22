@@ -1,8 +1,4 @@
-# Copyright 2017 by Connor T. Skennerton. All rights reserved.
-'''Parser for a KEGG module entry
-
-'''
-
+# Copyright 2017 by Connor T. Skennerton. Distributed under the terms of the MIT Lisence
 from __future__ import print_function
 import re
 import pickle
@@ -70,7 +66,9 @@ class KeggModule(object):
         return total / len(self.reactions)
 
     def _parse_kegg_module_definition(self):
-        '''convert a kegg module into a directed graph
+        '''convert a kegg module definition to a series of reactions.
+
+        THIS CURRENTLY DOES NOT WORK PROPERLY
 
         The M number entry is defined by a logical expression of K numbers
         (and other M numbers), allowing automatic evaluation of whether
